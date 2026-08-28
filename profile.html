@@ -3,86 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประวัติส่วนตัว | My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>My Portfolio | ประวัติส่วนตัว</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">My<span>Portfolio</span></a>
-            <nav class="nav-links">
-                <a href="index.html">หน้าแรก</a>
-                <a href="profile.html" class="active">ประวัติส่วนตัว</a>
-                <a href="education.html">การศึกษา</a>
-                <a href="hobby.html">งานอดิเรก</a>
-                <a href="contact.html">ติดต่อ</a>
-            </nav>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🌸 MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html" class="active">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="page-content">
-        <div class="container fade-in">
-            <div class="section-header">
-                <h2>ประวัติส่วนตัว</h2>
-                <div class="line"></div>
-            </div>
-
-            <div class="profile-layout">
-                <!-- ด้านซ้าย รูปภาพ -->
-                <div class="profile-card">
-                    <img src="images/profile.https://scontent.fbkk14-1.fna.fbcdn.net/v/t39.30808-6/619303016_122108797419205387_440453087435221133_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s960x960&_nc_cat=111&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3ZSpltmTROMQ7kNvwFkzRMm&_nc_oc=Ado1747Sg7dr-ftywsuOUsNl1pYMoTvUV0ef8NAcAXgtvA832gLGopF0YI1bm22gK1g&_nc_zt=23&_nc_ht=scontent.fbkk14-1.fna&_nc_gid=B5GlsiVp94s6GKKqvvR-1g&_nc_ss=7b2a8&oh=00_AQEjIrSGDGIqAV9iddGO7VD7EHRGFUQaEt8k2Us1UHo_ew&oe=6A96C502="รูปของฉัน">
-                    <h3>[กรอกชื่อ]</h3>
-                    <p class="subtitle">นักเรียนชั้น ม.3</p>
-                </div>
-
-                <!-- ด้านขวา ข้อมูล -->
-                <div class="info-card">
-                    <h3>เกี่ยวกับฉัน</h3>
-                    <p class="about-text">
-                        สวัสดีครับ/ค่ะ ฉันเป็นนักเรียนที่มีความสนใจในด้านเทคโนโลยีและการเรียนรู้สิ่งใหม่ๆ 
-                        นี่คือข้อมูลส่วนตัวเบื้องต้นของฉัน
-                    </p>
+    <main class="page-container animate-fade-in">
+        <h2 class="section-title">เกี่ยวกับฉัน 🐰</h2>
+        
+        <section class="profile-section">
+            <div class="profile-card">
+                <img src="https://placehold.co/300x300/ffb6c1/ffffff?text=Profile" alt="รูปโปรไฟล์" class="profile-img">
+                <div class="profile-info">
+                    <h3>[กรอกชื่อ] [กรอกนามสกุล]</h3>
+                    <p class="nickname">ชื่อเล่น: <strong>[กรอกชื่อเล่น]</strong></p>
                     
                     <div class="info-grid">
-                        <div class="info-item">
-                            <span class="label">ชื่อ-นามสกุล:</span>
-                            <span class="value">[วรัญญา ไชยวงศ์]</span>
+                        <div class="info-box">
+                            <span class="icon">🎂</span>
+                            <span class="label">วันเกิด</span>
+                            <span class="value">[กรอกวันเกิด]</span>
                         </div>
-                        <div class="info-item">
-                            <span class="label">ชื่อเล่น:</span>
-                            <span class="value">[เอเชีย]</span>
+                        <div class="info-box">
+                            <span class="icon">🎈</span>
+                            <span class="label">อายุ</span>
+                            <span class="value">[กรอกอายุ] ปี</span>
                         </div>
-                        <div class="info-item">
-                            <span class="label">อายุ:</span>
-                            <span class="value">[15] ปี</span>
+                        <div class="info-box">
+                            <span class="icon">🏫</span>
+                            <span class="label">ระดับชั้น</span>
+                            <span class="value">ม.3/[กรอกห้อง]</span>
                         </div>
-                        <div class="info-item">
-                            <span class="label">วันเกิด:</span>
-                            <span class="value">[13 สิงหาคม 2554]</span>
+                        <div class="info-box">
+                            <span class="icon">📍</span>
+                            <span class="label">จังหวัด</span>
+                            <span class="value">[กรอกจังหวัด]</span>
                         </div>
-                        <div class="info-item">
-                            <span class="label">โรงเรียน:</span>
-                            <span class="value">[โรงเรียนจอมทอง]</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="label">จังหวัด:</span>
-                            <span class="value">[เชียงใหม่]</span>
-                        </div>
+                    </div>
+
+                    <div class="about-me-box">
+                        <h4>ข้อความแนะนำตัวสั้นๆ ✨</h4>
+                        <p>สวัสดีค่ะ ฉันเป็นนักเรียนที่ชอบเรียนรู้สิ่งใหม่ๆ เสมอ เวลาว่างชอบ[กรอกสิ่งที่ชอบทำสั้นๆ] มีความใฝ่ฝันว่าอยากจะเป็น[กรอกความฝัน]ในอนาคต ยินดีที่ได้รู้จักทุกคนนะคะ!</p>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
     <footer>
-        <div class="footer-container">
-            <h3>My Portfolio</h3>
-            <p>จัดทำโดย [ด.ญ.วรัญญา ไชยวงศ์] ชั้น ม.3/[2]</p>
-            <p>&copy; 2024 All Rights Reserved.</p>
+        <div class="footer-content">
+            <p>🌸 MyPortfolio - ออกแบบโดย [กรอกชื่อ] ชั้น ม.3/[กรอกห้อง] 🌸</p>
+            <p>&copy; 2026 All Rights Reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
