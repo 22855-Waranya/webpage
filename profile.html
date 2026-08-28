@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | ประวัติส่วนตัว</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Portfolio | ประวัติส่วนตัว</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">🌸 MyPortfolio</div>
+        <nav class="glass-nav">
+            <div class="logo">✨ MyPort</div>
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html" class="active">ประวัติส่วนตัว</a></li>
@@ -21,53 +21,50 @@
         </nav>
     </header>
 
-    <main class="page-container animate-fade-in">
-        <h2 class="section-title">เกี่ยวกับฉัน 🐰</h2>
+    <main class="fade-in container">
+        <h2 class="page-title">📝 Profile <span class="highlight">ประวัติส่วนตัว</span></h2>
         
-        <section class="profile-section">
-            <div class="profile-card">
-                <img src="https://placehold.co/300x300/ffb6c1/ffffff?text=Profile" alt="รูปโปรไฟล์" class="profile-img">
-                <div class="profile-info">
-                    <h3>[กรอกชื่อ] [กรอกนามสกุล]</h3>
-                    <p class="nickname">ชื่อเล่น: <strong>[กรอกชื่อเล่น]</strong></p>
-                    
-                    <div class="info-grid">
-                        <div class="info-box">
-                            <span class="icon">🎂</span>
-                            <span class="label">วันเกิด</span>
-                            <span class="value">[กรอกวันเกิด]</span>
-                        </div>
-                        <div class="info-box">
-                            <span class="icon">🎈</span>
-                            <span class="label">อายุ</span>
-                            <span class="value">[กรอกอายุ] ปี</span>
-                        </div>
-                        <div class="info-box">
-                            <span class="icon">🏫</span>
-                            <span class="label">ระดับชั้น</span>
-                            <span class="value">ม.3/[กรอกห้อง]</span>
-                        </div>
-                        <div class="info-box">
-                            <span class="icon">📍</span>
-                            <span class="label">จังหวัด</span>
-                            <span class="value">[กรอกจังหวัด]</span>
-                        </div>
-                    </div>
+        <section class="profile-layout">
+            <div class="profile-left card quirky-card">
+                <img src="https://placehold.co/300x400/ff99cc/ffffff?text=Profile+Pic" alt="รูปของฉัน" class="profile-main-img">
+                <h3 class="name-title">[กรอกชื่อ]</h3>
+                <p class="tagline">"เรียนรู้ไม่มีวันหยุด สนุกกับทุกสิ่งที่ทำ"</p>
+            </div>
 
-                    <div class="about-me-box">
-                        <h4>ข้อความแนะนำตัวสั้นๆ ✨</h4>
-                        <p>สวัสดีค่ะ ฉันเป็นนักเรียนที่ชอบเรียนรู้สิ่งใหม่ๆ เสมอ เวลาว่างชอบ[กรอกสิ่งที่ชอบทำสั้นๆ] มีความใฝ่ฝันว่าอยากจะเป็น[กรอกความฝัน]ในอนาคต ยินดีที่ได้รู้จักทุกคนนะคะ!</p>
+            <div class="profile-right">
+                <div class="info-grid">
+                    <div class="info-card">
+                        <span class="icon">📛</span>
+                        <h4>ชื่อเล่น</h4>
+                        <p>[กรอกชื่อเล่น]</p>
                     </div>
+                    <div class="info-card">
+                        <span class="icon">🎂</span>
+                        <h4>อายุ / วันเกิด</h4>
+                        <p>[กรอกอายุ] ปี / [กรอกวันเกิด]</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">🏫</span>
+                        <h4>ระดับชั้น</h4>
+                        <p>ม.3/[กรอกห้อง]</p>
+                    </div>
+                    <div class="info-card">
+                        <span class="icon">📍</span>
+                        <h4>จังหวัด</h4>
+                        <p>[กรอกจังหวัด]</p>
+                    </div>
+                </div>
+
+                <div class="about-card card glass-card">
+                    <h3>💡 เกี่ยวกับฉัน (About Me)</h3>
+                    <p>สวัสดีค่ะ ฉันเป็นคนที่ชอบค้นหาสิ่งใหม่ๆ เสมอ เวลาว่างชอบ[กรอกสิ่งที่ชอบทำ] ฉันเชื่อว่าการที่เราได้ทำในสิ่งที่รัก จะทำให้เราทำมันออกมาได้ดีที่สุด ความฝันของฉันคือการได้เป็น[กรอกความฝัน] และฉันกำลังพยายามพัฒนาตัวเองทุกวันเพื่อไปให้ถึงจุดนั้นค่ะ!</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>🌸 MyPortfolio - ออกแบบโดย [กรอกชื่อ] ชั้น ม.3/[กรอกห้อง] 🌸</p>
-            <p>&copy; 2026 All Rights Reserved.</p>
-        </div>
+        <p>© 2026 ออกแบบและพัฒนาโดย [กรอกชื่อ] ม.3/[กรอกห้อง] | วิทยาการคำนวณ</p>
     </footer>
 </body>
 </html>
