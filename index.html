@@ -3,64 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก | My Portfolio</title>
-    <!-- เรียกใช้ Font ภาษาไทยจาก Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- เรียกใช้ CSS ของเรา -->
+    <title>My Portfolio | หน้าแรก</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">My<span>Portfolio</span></a>
-            <nav class="nav-links">
-                <a href="index.html" class="active">หน้าแรก</a>
-                <a href="profile.html">ประวัติส่วนตัว</a>
-                <a href="education.html">การศึกษา</a>
-                <a href="hobby.html">งานอดิเรก</a>
-                <a href="contact.html">ติดต่อ</a>
-            </nav>
-        </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🌸 MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main class="hero-section">
-        <div class="container hero-container">
-            <!-- ด้านซ้าย: ข้อความ -->
-            <div class="hero-content fade-in">
-                <span class="greeting">สวัสดีครับ/ค่ะ! ยินดีต้อนรับสู่เว็บไซต์ของฉัน</span>
-                <h1>ฉันชื่อ <span class="highlight">[วรัญญา ไชยวงศ์]</span></h1>
-                <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 3</h2>
-                <p>
-                    นี่คือเว็บไซต์ Portfolio ที่รวบรวมประวัติ ผลงาน และความสนใจของฉัน 
-                    ออกแบบด้วยความตั้งใจเพื่อแสดงให้เห็นถึงทักษะและความคิดสร้างสรรค์
-                </p>
+    <main>
+        <section class="hero animate-fade-in">
+            <div class="hero-content">
+                <span class="greeting">สวัสดีค่ายินดีต้อนรับ! ✨</span>
+                <h1>ฉันชื่อ <span class="highlight">[กรอกชื่อเล่น]</span></h1>
+                <p class="tagline">นักเรียนชั้น ม.3 ที่หลงใหลในการเรียนรู้และเทคโนโลยี 💻✨</p>
+                <p class="description">นี่คือเว็บไซต์ Portfolio ของฉัน สร้างขึ้นเพื่อรวบรวมผลงาน ความสนใจ และการเดินทางในวัยเรียนของฉันค่ะ</p>
                 <div class="hero-buttons">
-                    <a href="profile.html" class="btn btn-primary">รู้จักฉันมากขึ้น</a>
-                    <a href="hobby.html" class="btn btn-outline">ดูงานอดิเรกของฉัน</a>
+                    <a href="profile.html" class="btn btn-primary">รู้จักฉันมากขึ้น 🎀</a>
+                    <a href="hobby.html" class="btn btn-secondary">ดูงานอดิเรกของฉัน 🎨</a>
                 </div>
             </div>
-            
-            <!-- ด้านขวา: รูปภาพ -->
-            <div class="hero-image slide-up">
+            <div class="hero-image">
                 <div class="image-wrapper">
-                    <img src="images/images.jpg="รูปโปรไฟล์ของฉัน">
-                    <div class="circle-decoration"></div>
+                    <img src="https://placehold.co/400x400/ffb6c1/ffffff?text=My+Profile" alt="รูปโปรไฟล์ของฉัน">
+                    <div class="deco-circle circle-1"></div>
+                    <div class="deco-circle circle-2"></div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-container">
-            <h3>My Portfolio</h3>
-            <p>จัดทำโดย [ด.ญ.วรัญญา ไชยวงศ์] ชั้น ม.3/[2]</p>
-            <p>&copy; 2024 All Rights Reserved.</p>
+        <div class="footer-content">
+            <p>🌸 MyPortfolio - ออกแบบโดย [กรอกชื่อ] ชั้น ม.3/[กรอกห้อง] 🌸</p>
+            <p>&copy; 2026 All Rights Reserved.</p>
         </div>
     </footer>
-
 </body>
 </html>
