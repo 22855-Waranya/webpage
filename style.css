@@ -326,3 +326,331 @@ footer {
     .info-grid { grid-template-columns: 1fr; }
     .btn-group { flex-direction: column; }
 }
+/* ========================================
+   1. CSS Variables (โทนสีชมพูขาวน่ารักแปลกใหม่)
+   ======================================== */
+:root {
+    --primary: #ff6584;         /* สีชมพูหลัก เข้มกำลังดี */
+    --primary-light: #ffa6c1;   /* สีชมพูอ่อน */
+    --secondary: #ff99cc;       /* สีชมพูอมม่วงนิดๆ สร้างมิติ */
+    --bg-gradient: linear-gradient(135deg, #fff0f5 0%, #ffe4e1 100%);
+    --white-glass: rgba(255, 255, 255, 0.7);
+    --white-solid: #ffffff;
+    --text-dark: #4a4a4a;
+    --text-light: #777777;
+    --shadow-soft: 0 10px 30px rgba(255, 101, 132, 0.1);
+    --shadow-hover: 0 15px 40px rgba(255, 101, 132, 0.25);
+    /* สร้างรูปทรงแปลกๆ (Quirky Border Radius) */
+    --blob-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    --quirky-radius-1: 30px 10px 30px 10px;
+    --quirky-radius-2: 10px 30px 10px 30px;
+}
+
+/* ========================================
+   2. Global Reset & Typography
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main { flex: 1; }
+a { text-decoration: none; color: inherit; }
+li { list-style: none; }
+img { max-width: 100%; border-radius: 15px; }
+.text-center { text-align: center; margin-bottom: 2rem; color: var(--text-light); }
+
+.highlight { color: var(--primary); font-weight: 700; }
+.container { max-width: 1100px; margin: 3rem auto; padding: 0 20px; }
+.page-title { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: var(--text-dark); }
+
+/* ========================================
+   3. Navigation Bar (Glassmorphism & Sticky)
+   ======================================== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 5%;
+}
+
+.glass-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white-glass);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 15px 30px;
+    border-radius: 50px;
+    box-shadow: var(--shadow-soft);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+
+.nav-links { display: flex; gap: 20px; }
+
+.nav-links a {
+    font-weight: 600;
+    color: var(--text-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    background: var(--primary);
+    color: var(--white-solid);
+    box-shadow: 0 4px 15px rgba(255, 101, 132, 0.4);
+}
+
+/* ========================================
+   4. Buttons & Cards
+   ======================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: var(--white-solid);
+    box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+.btn-outline:hover {
+    background: var(--primary-light);
+    color: var(--white-solid);
+    border-color: var(--primary-light);
+    transform: translateY(-5px);
+}
+
+.card {
+    background: var(--white-solid);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.glass-card {
+    background: var(--white-glass);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+/* รูปร่างการ์ดแบบแปลกๆ ไม่สมมาตร (Quirky Effect) */
+.quirky-card { border-radius: var(--quirky-radius-1); }
+.quirky-card-alt { border-radius: var(--quirky-radius-2); }
+
+/* ========================================
+   5. Hero Section (index.html)
+   ======================================== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-text { flex: 1; padding-right: 40px; }
+.badge {
+    background: var(--primary-light);
+    color: var(--white-solid);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 10px; }
+.hero-text .subtitle { font-size: 1.2rem; color: var(--primary); font-weight: 600; margin-bottom: 20px; }
+.hero-text .description { margin-bottom: 30px; font-size: 1.1rem; color: var(--text-light); }
+.btn-group { display: flex; gap: 15px; }
+
+/* Blob Image Effect (มีความแปลก น่ารัก) */
+.hero-visual { flex: 1; position: relative; display: flex; justify-content: center; }
+.blob-img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--blob-radius);
+    animation: morph 6s ease-in-out infinite; /* ดุ๊กดิ๊ก */
+    box-shadow: var(--shadow-hover);
+    border: 10px solid var(--white-glass);
+}
+
+.floating-deco {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: float 4s ease-in-out infinite;
+}
+.deco-1 { top: 10%; left: 10%; animation-delay: 0s; }
+.deco-2 { bottom: 10%; right: 10%; animation-delay: 1s; font-size: 3rem; }
+.deco-3 { top: 20%; right: 5%; animation-delay: 2s; }
+
+/* ========================================
+   6. Profile Section
+   ======================================== */
+.profile-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; }
+.profile-left { text-align: center; border: 3px dashed var(--primary-light); }
+.profile-main-img { border-radius: var(--blob-radius); border: 5px solid var(--white-solid); margin-bottom: 15px; }
+.name-title { color: var(--primary); font-size: 1.8rem; }
+.profile-left .tagline { font-style: italic; color: var(--text-light); margin-top: 10px; }
+
+.info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px; }
+.info-card { background: var(--white-solid); padding: 15px; border-radius: 15px; box-shadow: var(--shadow-soft); display: flex; flex-direction: column; align-items: center; text-align: center; border-bottom: 4px solid var(--primary-light); }
+.info-card .icon { font-size: 2rem; margin-bottom: 10px; }
+.info-card h4 { color: var(--text-light); font-size: 0.9rem; }
+.info-card p { font-weight: 600; color: var(--primary); }
+
+.about-card h3 { margin-bottom: 15px; color: var(--primary); }
+
+/* ========================================
+   7. Education Section (Timeline)
+   ======================================== */
+.education-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+.timeline-container { border-left: 4px dotted var(--primary-light); padding-left: 30px; margin-left: 20px; }
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-dot { position: absolute; left: -50px; top: 10px; font-size: 1.5rem; background: var(--white-solid); border-radius: 50%; padding: 5px; box-shadow: var(--shadow-soft); }
+.timeline-content h3 { color: var(--primary); }
+.timeline-content .school { font-weight: 600; margin-top: 10px; }
+.timeline-content .year { color: var(--text-light); font-size: 0.9rem; }
+
+.edu-highlight h3 { margin-bottom: 20px; color: var(--primary); }
+.highlight-list li { margin-bottom: 15px; border-bottom: 1px dashed var(--primary-light); padding-bottom: 10px; }
+.mascot-img { text-align: center; margin-top: 20px; }
+.mascot-img img { border-radius: 50%; border: 5px solid var(--white-solid); }
+
+/* ========================================
+   8. Hobby Section
+   ======================================== */
+.hobby-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.hobby-card {
+    background: var(--white-glass);
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+}
+/* สลับรูปทรงให้ดูแปลกๆ (Quirky Grid) */
+.hobby-card:nth-child(odd) { border-radius: var(--quirky-radius-1); }
+.hobby-card:nth-child(even) { border-radius: var(--quirky-radius-2); }
+
+.hobby-card:hover {
+    transform: translateY(-15px) rotate(2deg); /* เด้งและเอียงเล็กน้อย */
+    border-color: var(--primary);
+    background: var(--white-solid);
+    box-shadow: var(--shadow-hover);
+}
+.hobby-icon { font-size: 3rem; margin-bottom: 15px; }
+.hobby-card h3 { color: var(--primary); margin-bottom: 10px; }
+.hobby-card p { font-size: 0.95rem; color: var(--text-light); }
+
+/* ========================================
+   9. Contact Section
+   ======================================== */
+.contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.contact-text h3 { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+.contact-text p { margin-bottom: 30px; font-size: 1.1rem; }
+.contact-img { border-radius: var(--quirky-radius-1); box-shadow: var(--shadow-soft); }
+
+.contact-links { display: flex; flex-direction: column; gap: 20px; }
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-left: 5px solid var(--primary);
+    transition: all 0.3s ease;
+}
+.contact-card:hover { transform: translateX(10px); box-shadow: var(--shadow-hover); }
+.contact-card .icon { font-size: 2.5rem; }
+.contact-card h4 { color: var(--primary); }
+.contact-card p { color: var(--text-light); font-size: 0.9rem; }
+.bg-highlight { background: var(--primary-light); color: var(--white-solid); border-left: 5px solid var(--primary); }
+.bg-highlight h4, .bg-highlight p { color: var(--white-solid); }
+
+/* ========================================
+   10. Footer
+   ======================================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: auto;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    background: var(--white-glass);
+    backdrop-filter: blur(10px);
+}
+
+/* ========================================
+   11. Animations
+   ======================================== */
+.fade-in { animation: fadeIn 1s ease-out forwards; }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes morph {
+    0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+    50% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 60%; }
+    100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ========================================
+   12. Responsive Design (Media Queries)
+   ======================================== */
+@media screen and (max-width: 900px) {
+    .hero-section { flex-direction: column-reverse; text-align: center; padding-top: 40px; }
+    .hero-text { padding-right: 0; margin-top: 30px; }
+    .btn-group { justify-content: center; }
+    .profile-layout, .education-layout, .contact-layout { grid-template-columns: 1fr; }
+    .timeline-container { margin-left: 0; }
+}
+
+@media screen and (max-width: 600px) {
+    .glass-nav { flex-direction: column; border-radius: 20px; }
+    .nav-links { flex-wrap: wrap; justify-content: center; margin-top: 15px; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .blob-img { width: 250px; height: 250px; }
+    .info-grid { grid-template-columns: 1fr; }
+    .btn-group { flex-direction: column; }
+}
