@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | ติดต่อ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>ติดต่อฉัน | Portfolio ของฉัน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="glass-nav">
-            <div class="logo">✨ MyPort</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html">ประวัติส่วนตัว</a></li>
@@ -18,57 +18,40 @@
                 <li><a href="hobby.html">งานอดิเรก</a></li>
                 <li><a href="contact.html" class="active">ติดต่อ</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <main class="fade-in container">
-        <h2 class="page-title">💌 Contact <span class="highlight">ช่องทางการติดต่อ</span></h2>
-        
-        <div class="contact-layout">
-            <div class="contact-text">
-                <h3>สามารถติดต่อฉันได้ที่ 💬</h3>
-                <p>ยินดีที่ได้รู้จักทุกคนนะคะ! ถ้ามีคำถามเกี่ยวกับโครงงาน แลกเปลี่ยนความสนใจ หรืออยากทักทาย สามารถติดต่อมาได้ตามช่องทางเหล่านี้เลยค่ะ 👇</p>
-                <img src="https://placehold.co/300x200/ffb6c1/ffffff?text=Mailbox" alt="Mailbox" class="contact-img">
-            </div>
-
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-card card">
-                    <span class="icon">📧</span>
-                    <div class="detail">
-                        <h4>Email</h4>
-                        <p>22855@chomthong.ac.th</p>
-                    </div>
-                </a>
-
-                <a href="#" class="contact-card card">
-                    <span class="icon">📷</span>
-                    <div class="detail">
-                        <h4>Instagram</h4>
-                        <p>@waranya.8a</p>
-                    </div>
-                </a>
-
-                <a href="#" class="contact-card card">
-                    <span class="icon">📘</span>
-                    <div class="detail">
-                        <h4>Facebook</h4>
-                        <p>Waranya XI</p>
-                    </div>
-                </a>
-
-                <div class="contact-card card bg-highlight">
-                    <span class="icon">🏫</span>
-                    <div class="detail">
-                        <h4>เจอตัวจริงได้ที่</h4>
-                        <p>โรงเรียนจอมทอง ม.3/2</p>
-                    </div>
-                </div>
-            </div>
         </div>
+    </nav>
+
+    <main class="container fade-in">
+        <div class="page-header">
+            <h2>ช่องทางการติดต่อ</h2>
+            <p>สามารถติดต่อพูดคุยหรือติดตามผลงานของฉันได้ตามช่องทางด้านล่าง</p>
+        </div>
+
+        <section class="contact-section">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>myemail@example.com</p>
+                <a href="mailto:myemail@example.com" class="btn btn-outline">ส่งอีเมล</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">🌐</div>
+                <h3>Social Media</h3>
+                <p>Facebook / Instagram</p>
+                <a href="#" class="btn btn-outline">ติดตามฉัน</a>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📍</div>
+                <h3>Location</h3>
+                <p>[กรอกจังหวัด], ประเทศไทย</p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>© 2026 ออกแบบและพัฒนาโดย [น.ส.วรัญญา ไชยวงศ์ ] ม.3/[2] | วิทยาการคำนวณ</p>
+        <div class="footer-container">
+            <p>&copy; 2026 [กรอกชื่อ] - นักเรียนชั้นมัธยมศึกษาปีที่ 3</p>
+        </div>
     </footer>
 </body>
 </html>
