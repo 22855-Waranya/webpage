@@ -1,70 +1,52 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>งานอดิเรก | Portfolio ของฉัน</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>งานอดิเรก | เว็บของวรัญญา</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">My<span>Portfolio</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-                <li><a href="education.html">การศึกษา</a></li>
-                <li><a href="hobby.html" class="active">งานอดิเรก</a></li>
-                <li><a href="contact.html">ติดต่อ</a></li>
-            </ul>
-        </div>
-    </nav>
+<div id="bg-layer"></div>
 
-    <main class="container fade-in">
-        <div class="page-header">
-            <h2>งานอดิเรกและความสนใจ</h2>
-            <p>สิ่งที่ฉันชอบทำในเวลาว่างเพื่อพัฒนาตัวเองและผ่อนคลาย</p>
-        </div>
+<nav class="orbit-nav">
+    <a href="index.html">หน้าแรก</a>
+    <a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="education.html">การศึกษา</a>
+    <a href="hobby.html" class="current">งานอดิเรก</a>
+    <a href="contact.html">ติดต่อ</a>
+</nav>
 
-        <section class="hobby-grid">
-            <div class="hobby-card">
-                <div class="hobby-icon">🎮</div>
-                <h3>เล่นเกม</h3>
-                <p>ชอบเล่นเกมแนววางแผนและแก้ไขปัญหา ช่วยฝึกการคิดวิเคราะห์</p>
-            </div>
-            <div class="hobby-card">
-                <div class="hobby-icon">💻</div>
-                <h3>เทคโนโลยี</h3>
-                <p>ติดตามข่าวสารและเรียนรู้พื้นฐานการเขียนโปรแกรมใหม่ๆ</p>
-            </div>
-            <div class="hobby-card">
-                <div class="hobby-icon">🎵</div>
-                <h3>ฟังเพลง</h3>
-                <p>ฟังเพลงหลากหลายแนวเพื่อผ่อนคลายความเครียดจากการเรียน</p>
-            </div>
-            <div class="hobby-card">
-                <div class="hobby-icon">🎬</div>
-                <h3>ภาพยนตร์</h3>
-                <p>ชอบดูหนังแนว Sci-Fi และสืบสวนสอบสวน</p>
-            </div>
-            <div class="hobby-card">
-                <div class="hobby-icon">⚽</div>
-                <h3>กีฬา</h3>
-                <p>ออกกำลังกายและเล่นกีฬากับเพื่อนๆ ในช่วงวันหยุด</p>
-            </div>
-            <div class="hobby-card">
-                <div class="hobby-icon">📷</div>
-                <h3>ถ่ายภาพ</h3>
-                <p>ชอบถ่ายภาพวิวทิวทัศน์และเก็บความทรงจำต่างๆ</p>
-            </div>
-        </section>
-    </main>
+<div class="shell">
+    <h1 class="page-title">งานอดิเรก</h1>
+    <p class="page-lede">สิ่งที่ทำให้ดิฉันมีความสุขในเวลาว่าง</p>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 [กรอกชื่อ] - นักเรียนชั้นมัธยมศึกษาปีที่ 3</p>
+    <div class="hobby-grid">
+        <div class="hobby-card">
+            <span class="emoji">🎮</span>
+            <div class="name">[งานอดิเรก 1]</div>
+            <div class="desc">[อธิบายสั้นๆ ว่าทำไมถึงชอบ]</div>
         </div>
-    </footer>
+        <div class="hobby-card">
+            <span class="emoji">📷</span>
+            <div class="name">[งานอดิเรก 2]</div>
+            <div class="desc">[อธิบายสั้นๆ ว่าทำไมถึงชอบ]</div>
+        </div>
+        <div class="hobby-card">
+            <span class="emoji">🎸</span>
+            <div class="name">[งานอดิเรก 3]</div>
+            <div class="desc">[อธิบายสั้นๆ ว่าทำไมถึงชอบ]</div>
+        </div>
+        <div class="hobby-card">
+            <span class="emoji">🌌</span>
+            <div class="name">ดูดาว</div>
+            <div class="desc">ชอบมองท้องฟ้ายามค่ำคืนและตามหาดาวตก</div>
+        </div>
+    </div>
+</div>
+
+<footer class="sign-off">© 2026 — น.ส.วรัญญา ไชยวงศ์</footer>
+
+<script src="space-bg.js"></script>
 </body>
 </html>
