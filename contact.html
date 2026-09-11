@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ติดต่อฉัน | Portfolio ของฉัน</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ติดต่อ | เว็บของวรัญญา</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">My<span>Portfolio</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-                <li><a href="education.html">การศึกษา</a></li>
-                <li><a href="hobby.html">งานอดิเรก</a></li>
-                <li><a href="contact.html" class="active">ติดต่อ</a></li>
-            </ul>
-        </div>
-    </nav>
+<div id="bg-layer"></div>
 
-    <main class="container fade-in">
-        <div class="page-header">
-            <h2>ช่องทางการติดต่อ</h2>
-            <p>สามารถติดต่อพูดคุยหรือติดตามผลงานของฉันได้ตามช่องทางด้านล่าง</p>
-        </div>
+<nav class="orbit-nav">
+    <a href="index.html">หน้าแรก</a>
+    <a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="education.html">การศึกษา</a>
+    <a href="hobby.html">งานอดิเรก</a>
+    <a href="contact.html" class="current">ติดต่อ</a>
+</nav>
 
-        <section class="contact-section">
-            <div class="contact-card">
-                <div class="contact-icon">📧</div>
-                <h3>Email</h3>
-                <p>myemail@example.com</p>
-                <a href="mailto:myemail@example.com" class="btn btn-outline">ส่งอีเมล</a>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">🌐</div>
-                <h3>Social Media</h3>
-                <p>Facebook / Instagram</p>
-                <a href="#" class="btn btn-outline">ติดตามฉัน</a>
-            </div>
-            <div class="contact-card">
-                <div class="contact-icon">📍</div>
-                <h3>Location</h3>
-                <p>[กรอกจังหวัด], ประเทศไทย</p>
-            </div>
-        </section>
-    </main>
+<div class="shell">
+    <h1 class="page-title">ติดต่อดิฉัน</h1>
+    <p class="page-lede">ทักมาคุยกันได้เลยผ่านช่องทางเหล่านี้</p>
 
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 [กรอกชื่อ] - นักเรียนชั้นมัธยมศึกษาปีที่ 3</p>
-        </div>
-    </footer>
+    <div class="panel">
+        <ul class="contact-list">
+            <li><span class="label">อีเมล</span><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><span class="label">โทรศัพท์</span><span class="value">[หมายเลขโทรศัพท์]</span></li>
+            <li><span class="label">Facebook</span><a href="#" target="_blank">[ลิงก์ Facebook]</a></li>
+            <li><span class="label">Instagram</span><a href="#" target="_blank">[ลิงก์ Instagram]</a></li>
+            <li><span class="label">LINE</span><span class="value">[LINE ID]</span></li>
+        </ul>
+    </div>
+</div>
+
+<footer class="sign-off">© 2026 — น.ส.วรัญญา ไชยวงศ์</footer>
+
+<script src="space-bg.js"></script>
 </body>
 </html>
