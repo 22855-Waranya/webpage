@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | ประวัติส่วนตัว</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>ประวัติส่วนตัว | Portfolio ของฉัน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="glass-nav">
-            <div class="logo">✨ MyPort</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html" class="active">ประวัติส่วนตัว</a></li>
@@ -18,53 +18,54 @@
                 <li><a href="hobby.html">งานอดิเรก</a></li>
                 <li><a href="contact.html">ติดต่อ</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main class="fade-in container">
-        <h2 class="page-title">📝 Profile <span class="highlight">ประวัติส่วนตัว</span></h2>
-        
+    <main class="container fade-in">
+        <div class="page-header">
+            <h2>ประวัติส่วนตัว</h2>
+            <p>ข้อมูลเบื้องต้นและเรื่องราวเกี่ยวกับฉัน</p>
+        </div>
+
         <section class="profile-layout">
-            <div class="profile-left card quirky-card">
-                <img src="images/รุป (1).jpg" alt="รูปของฉัน" class="profile-main-img">
-                <h3 class="name-title">วรัญญา ไชยวงศ์ </h3>
-                <p class="tagline">"เรียนรู้ไม่มีวันหยุด สนุกกับทุกสิ่งที่ทำ"</p>
+            <div class="profile-card text-center">
+                <img src="https://placehold.co/300x300/42A5F5/FFFFFF?text=Profile" alt="รูปโปรไฟล์ของฉัน" class="profile-avatar">
+                <h3>[กรอกชื่อ]</h3>
+                <p class="role-badge">นักเรียนชั้น ม.3</p>
             </div>
-
-            <div class="profile-right">
-                <div class="info-grid">
-                    <div class="info-card">
-                        <span class="icon">📛</span>
-                        <h4>ชื่อเล่น</h4>
-                        <p>เอเชีย</p>
-                    </div>
-                    <div class="info-card">
-                        <span class="icon">🎂</span>
-                        <h4>อายุ / วันเกิด</h4>
-                        <p>15 ปี / 13 ส.ค 2554</p>
-                    </div>
-                    <div class="info-card">
-                        <span class="icon">🏫</span>
-                        <h4>ระดับชั้น</h4>
-                        <p>ม.3/2</p>
-                    </div>
-                    <div class="info-card">
-                        <span class="icon">📍</span>
-                        <h4>จังหวัด</h4>
-                        <p>เชียงใหม</p>
-                    </div>
+            
+            <div class="profile-info">
+                <div class="info-card">
+                    <h3>เกี่ยวกับฉัน</h3>
+                    <p>สวัสดี! ฉันเป็นนักเรียนที่ชอบเรียนรู้สิ่งใหม่ๆ มีความสนใจในด้านคอมพิวเตอร์และการออกแบบ ฉันเชื่อว่าการลงมือทำคือการเรียนรู้ที่ดีที่สุด</p>
                 </div>
-
-                <div class="about-card card glass-card">
-                    <h3>💡 เกี่ยวกับฉัน (About Me)</h3>
-                    <p>สวัสดีค่ะ ฉันเป็นคนที่ชอบค้นหาสิ่งใหม่ๆ เสมอ เวลาว่างชอบ[เล่นเกม ฟังเพลง ดูอะนิเมะ] ฉันเชื่อว่าการที่เราได้ทำในสิ่งที่รัก จะทำให้เราทำมันออกมาได้ดีที่สุด ความฝันของฉันคือการได้เป็น[กรอกความฝัน] และฉันกำลังพยายามพัฒนาตัวเองทุกวันเพื่อไปให้ถึงจุดนั้นค่ะ!</p>
+                
+                <div class="info-grid">
+                    <div class="info-box">
+                        <span class="info-label">ชื่อเล่น</span>
+                        <span class="info-value">[กรอกชื่อเล่น]</span>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-label">อายุ</span>
+                        <span class="info-value">[กรอกอายุ] ปี</span>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-label">วันเกิด</span>
+                        <span class="info-value">[กรอกวันเกิด]</span>
+                    </div>
+                    <div class="info-box">
+                        <span class="info-label">จังหวัด</span>
+                        <span class="info-value">[กรอกจังหวัด]</span>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-       
+        <div class="footer-container">
+            <p>&copy; 2026 [กรอกชื่อ] - นักเรียนชั้นมัธยมศึกษาปีที่ 3</p>
+        </div>
     </footer>
 </body>
 </html>
