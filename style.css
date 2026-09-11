@@ -1,126 +1,482 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>อวกาศของฉัน</title>
-    <style>
-        /* =========================================
-           1. การตั้งค่าพื้นหลังอวกาศ (Space Background)
-           ========================================= */
-        body {
-            margin: 0;
-            padding: 0;
-            /* ไล่สีพื้นหลังให้ดูเป็นอวกาศมืดๆ */
-            background: linear-gradient(to bottom, #000000, #0B0C10, #1F2833);
-            height: 100vh;
-            overflow: hidden; /* ป้องกันไม่ให้หน้าเว็บเลื่อนจากแอนิเมชันดาวตก */
-            color: white;
-            font-family: 'Kanit', sans-serif; /* ใช้ฟอนต์ที่อ่านง่าย */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+/* =========================================
+   CSS Variables (Design System)
+   ========================================= */
+:root {
+    --color-primary-dark: #0D47A1;
+    --color-primary: #1976D2;
+    --color-primary-light: #42A5F5;
+    --color-secondary: #90CAF9;
+    --color-bg-light: #E3F2FD;
+    --color-white: #FFFFFF;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    
+    --shadow-soft: 0 10px 30px rgba(25, 118, 210, 0.08);
+    --shadow-hover: 0 15px 35px rgba(25, 118, 210, 0.15);
+    
+    --border-radius: 16px;
+    --transition: all 0.3s ease;
+}
 
-        /* สร้างดวงดาวเล็กๆ ประดับพื้นหลังแบบนิ่งๆ */
-        .stars {
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: transparent;
-            z-index: 1;
-            /* ใช้ Radial Gradient สร้างจุดดาวกระจายๆ */
-            background-image: 
-                radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1px 1px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-                radial-gradient(2px 2px at 160px 120px, #dddddd, rgba(0,0,0,0));
-            background-repeat: repeat;
-            background-size: 200px 200px;
-        }
+/* =========================================
+   Global Styles
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* =========================================
-           2. เอฟเฟกต์ข้อความดุ๊กดิ๊ก (Wiggle Hover Effect)
-           ========================================= */
-        .content {
-            z-index: 10; /* ให้อยู่เหนือพื้นหลังและดาวตก */
-            text-align: center;
-        }
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-        .wiggle-text {
-            display: inline-block; /* จำเป็นต้องใส่เพื่อให้โค้ดขยับทำงานได้ดี */
-            font-size: 3rem;
-            margin: 10px;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 20px 60px; /* Top padding for sticky nav */
+    min-height: calc(100vh - 80px);
+}
 
-        /* เมื่อเอาเมาส์ไปชี้ */
-        .wiggle-text:hover {
-            color: #66FCF1; /* เปลี่ยนเป็นสีฟ้านีออน */
-            text-shadow: 0 0 15px #66FCF1, 0 0 30px #45A29E; /* เพิ่มแสงเรืองรอง */
-            animation: wiggle 0.4s infinite; /* เรียกใช้แอนิเมชันดุ๊กดิ๊ก */
-        }
+a { text-decoration: none; }
+ul { list-style: none; }
 
-        /* คีย์เฟรมสำหรับการสั่น/ดุ๊กดิ๊ก */
-        @keyframes wiggle {
-            0% { transform: rotate(0deg) scale(1.1); }
-            25% { transform: rotate(-5deg) scale(1.1); }
-            50% { transform: rotate(0deg) scale(1.1); }
-            75% { transform: rotate(5deg) scale(1.1); }
-            100% { transform: rotate(0deg) scale(1.1); }
-        }
+/* =========================================
+   Typography & Utilities
+   ========================================= */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
 
-        /* =========================================
-           3. เอฟเฟกต์ดาวตก (Shooting Stars)
-           ========================================= */
-        .shooting-star {
-            position: absolute;
-            width: 2px;
-            height: 80px;
-            /* สร้างลักษณะหางของดาวตก */
-            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
-            z-index: 5;
-            opacity: 0;
-            /* ทำให้ดาวตกเอียง 45 องศา */
-            transform: rotate(45deg);
-            animation: fall linear infinite;
-        }
+.page-header h2 {
+    font-size: 2.5rem;
+    color: var(--color-primary-dark);
+    margin-bottom: 10px;
+}
 
-        /* ทิศทางการตกของดาว */
-        @keyframes fall {
-            0% { 
-                transform: translateY(-100px) translateX(0) rotate(45deg); 
-                opacity: 1; 
-            }
-            100% { 
-                transform: translateY(100vh) translateX(-100vw) rotate(45deg); 
-                opacity: 0; 
-            }
-        }
+.page-header p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
 
-        /* กำหนดตำแหน่งและความเร็วของดาวตกแต่ละดวงให้ต่างกัน */
-        .star1 { top: -10%; left: 80%; animation-duration: 2s; animation-delay: 0s; }
-        .star2 { top: -20%; left: 50%; animation-duration: 2.5s; animation-delay: 1s; }
-        .star3 { top: 10%; left: 100%; animation-duration: 1.5s; animation-delay: 2s; }
-        .star4 { top: -30%; left: 70%; animation-duration: 3s; animation-delay: 3.5s; }
+.text-center { text-align: center; }
 
-    </style>
-</head>
-<body>
+/* =========================================
+   Navigation Bar
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
 
-    <div class="stars"></div>
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    <div class="shooting-star star1"></div>
-    <div class="shooting-star star2"></div>
-    <div class="shooting-star star3"></div>
-    <div class="shooting-star star4"></div>
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+}
 
-    <div class="content">
-        <h1 class="wiggle-text">🚀 ยินดีต้อนรับสู่ห้วงอวกาศ!</h1>
-        <br>
-        <p class="wiggle-text">ลองเอาเมาส์มาชี้ที่ข้อความพวกนี้ดูสิ 💫</p>
-    </div>
+.logo span {
+    color: var(--color-primary-light);
+}
 
-</body>
-</html>
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(25, 118, 210, 0.2);
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(25, 118, 210, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   Hero Section (Index)
+   ========================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.greeting {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.hero-name {
+    font-size: 3.5rem;
+    color: var(--color-primary-dark);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.hero-desc {
+    margin-bottom: 30px;
+    color: var(--color-text);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--color-white);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.02);
+}
+
+.circle-decoration {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 390px;
+    height: 390px;
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-bg-light));
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* =========================================
+   Profile Section
+   ========================================= */
+.profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+}
+
+.profile-card, .info-card, .info-box {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid var(--color-bg-light);
+}
+
+.role-badge {
+    display: inline-block;
+    background: var(--color-bg-light);
+    color: var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.info-card { margin-bottom: 20px; }
+.info-card h3 { color: var(--color-primary-dark); margin-bottom: 15px; }
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.info-label { color: var(--color-text-light); font-size: 0.9rem; }
+.info-value { color: var(--color-primary-dark); font-weight: 600; font-size: 1.1rem; }
+
+/* =========================================
+   Education Timeline
+   ========================================= */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--color-secondary);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 11px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    background: var(--color-primary);
+    border: 4px solid var(--color-white);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--color-bg-light);
+}
+
+.timeline-content {
+    background: var(--color-white);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.timeline-year {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-white);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 { color: var(--color-primary-dark); margin-bottom: 5px; }
+.school-name { font-weight: 500; color: var(--color-primary); margin-bottom: 10px; }
+.edu-detail { color: var(--color-text-light); }
+
+/* =========================================
+   Hobby Grid
+   ========================================= */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.hobby-card {
+    background: var(--color-white);
+    padding: 40px 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.hobby-icon {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.hobby-card:hover .hobby-icon {
+    transform: scale(1.1);
+}
+
+.hobby-card h3 { color: var(--color-primary-dark); margin-bottom: 15px; }
+.hobby-card p { color: var(--color-text-light); }
+
+/* =========================================
+   Contact Section
+   ========================================= */
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: var(--color-white);
+    padding: 40px 20px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 { color: var(--color-primary-dark); margin-bottom: 10px; }
+.contact-card p { color: var(--color-text-light); margin-bottom: 20px; }
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+    background: var(--color-primary-dark);
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: auto;
+}
+
+/* =========================================
+   Animations
+   ========================================= */
+.fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+@media (max-width: 992px) {
+    .profile-layout { grid-template-columns: 1fr; }
+    .hero-section { flex-direction: column; text-align: center; }
+    .hero-buttons { justify-content: center; }
+    .image-wrapper img, .circle-decoration { width: 300px; height: 300px; }
+    .circle-decoration { top: 0; right: 0; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; /* สำหรับมือถือ ควรใช้ Hamburger Menu แต่ที่นี่ซ่อนชั่วคราวเพื่อความเรียบง่ายตามโจทย์ HTML/CSS */ }
+    /* วิธีแสดงเมนูบนมือถือแบบเรียบง่ายโดยไม่ใช้ JS */
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        position: static;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .nav-container { flex-direction: column; }
+    .container { padding-top: 140px; }
+    .hero-name { font-size: 2.5rem; }
+    .info-grid { grid-template-columns: 1fr; }
+}
