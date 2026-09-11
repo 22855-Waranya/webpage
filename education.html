@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | การศึกษา</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>การศึกษา | Portfolio ของฉัน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="glass-nav">
-            <div class="logo">✨ MyPort</div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html">ประวัติส่วนตัว</a></li>
@@ -18,50 +18,54 @@
                 <li><a href="hobby.html">งานอดิเรก</a></li>
                 <li><a href="contact.html">ติดต่อ</a></li>
             </ul>
-        </nav>
-    </header>
-
-    <main class="fade-in container">
-        <h2 class="page-title">🎓 Education <span class="highlight">เส้นทางการศึกษา</span></h2>
-
-        <div class="education-layout">
-            <div class="timeline-container">
-                <div class="timeline-item">
-                    <div class="timeline-dot">🎒</div>
-                    <div class="timeline-content card quirky-card-alt">
-                        <h3>ระดับประถมศึกษา</h3>
-                        <p class="school">โรงเรียน ศรีจอมทอง</p>
-                        <p class="year">ปีการศึกษา: 2560 - 2566</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot">📚</div>
-                    <div class="timeline-content card quirky-card">
-                        <h3>ระดับมัธยมศึกษาตอนต้น</h3>
-                        <p class="school">โรงเรียน จอมทอง</p>
-                        <p class="year">ปีการศึกษา: 2567 - ปัจจุบัน</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="edu-highlight card glass-card">
-                <h3>⭐ ข้อมูลปัจจุบัน</h3>
-                <ul class="highlight-list">
-                    <li><strong>🏫 สถานศึกษา:</strong> [โรงเรียนจอมทอง]</li>
-                    <li><strong>🎓 ระดับชั้น:</strong> มัธยมศึกษาปีที่ 3 ห้อง [2]</li>
-                    <li><strong>❤️ วิชาที่ชอบ:</strong> วิทย์-คณิต</li>
-                    <li><strong>🎯 ความสนใจพิเศษ:</strong> [-]</li>
-                </ul>
-                <div class="mascot-img">
-                    <img src="https://placehold.co/150x150/ffb6c1/ffffff?text=School+Life" alt="School Life">
-                </div>
-            </div>
         </div>
+    </nav>
+
+    <main class="container fade-in">
+        <div class="page-header">
+            <h2>ประวัติการศึกษา</h2>
+            <p>เส้นทางการเรียนรู้ของฉันตั้งแต่อดีตจนถึงปัจจุบัน</p>
+        </div>
+
+        <section class="education-section">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">ปัจจุบัน</span>
+                        <h3>มัธยมศึกษาตอนต้น (ม.3)</h3>
+                        <p class="school-name">โรงเรียน: [กรอกชื่อโรงเรียน]</p>
+                        <p class="edu-detail">ระดับชั้น: ม.3/[กรอกห้อง] | วิชาที่ชอบ: [กรอกวิชาที่ชอบ]</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">อดีต</span>
+                        <h3>มัธยมศึกษาปีที่ 1 - 2</h3>
+                        <p class="school-name">โรงเรียน: [กรอกชื่อโรงเรียน]</p>
+                        <p class="edu-detail">เข้าร่วมกิจกรรมชุมนุมคอมพิวเตอร์และเรียนรู้พื้นฐานเทคโนโลยี</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">อดีต</span>
+                        <h3>ประถมศึกษา (ป.1 - ป.6)</h3>
+                        <p class="school-name">โรงเรียน: [กรอกชื่อโรงเรียนประถม]</p>
+                        <p class="edu-detail">เริ่มต้นการเรียนรู้และค้นพบความชอบส่วนตัว</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-  
+        <div class="footer-container">
+            <p>&copy; 2026 [กรอกชื่อ] - นักเรียนชั้นมัธยมศึกษาปีที่ 3</p>
+        </div>
     </footer>
 </body>
 </html>
