@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | หน้าแรก</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>หน้าแรก | Portfolio ของฉัน</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav class="glass-nav">
-            <div class="logo">✨ MyPort</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">My<span>Portfolio</span></a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">หน้าแรก</a></li>
                 <li><a href="profile.html">ประวัติส่วนตัว</a></li>
@@ -18,34 +19,36 @@
                 <li><a href="hobby.html">งานอดิเรก</a></li>
                 <li><a href="contact.html">ติดต่อ</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main class="fade-in">
+    <!-- Main Content -->
+    <main class="container fade-in">
         <section class="hero-section">
-            <div class="hero-text">
-                <span class="badge">Hello World! 👋</span>
-                <h1>สวัสดี, ฉันคือ <br><span class="highlight">[เอเชีย]</span> 🌸</h1>
-                <p class="subtitle">นักเรียนชั้น ม.3 ผู้หลงใหลในศิลปะ เทคโนโลยี และความคิดสร้างสรรค์</p>
-                <p class="description">ยินดีต้อนรับสู่โลกของฉัน! เว็บไซต์นี้คือ Portfolio ที่รวบรวมตัวตน ความชอบ และผลงานที่ฉันตั้งใจสร้างสรรค์ขึ้นมา หวังว่าคุณจะชอบนะคะ 💖</p>
-                <div class="btn-group">
-                    <a href="profile.html" class="btn btn-primary">รู้จักฉันมากขึ้น 🐰</a>
-                    <a href="hobby.html" class="btn btn-outline">ดูงานอดิเรกของฉัน 🎨</a>
+            <div class="hero-content">
+                <p class="greeting">สวัสดีครับ/ค่ะ 👋 ยินดีต้อนรับสู่โลกของ</p>
+                <h1 class="hero-name">[กรอกชื่อ]</h1>
+                <p class="hero-subtitle">นักเรียนชั้นมัธยมศึกษาปีที่ 3 | ผู้หลงใหลในเทคโนโลยีและการเรียนรู้</p>
+                <p class="hero-desc">เว็บไซต์นี้สร้างขึ้นเพื่อเป็นโครงงานวิชาคอมพิวเตอร์ รวบรวมผลงาน ประวัติ และความสนใจของฉันไว้ในที่เดียว</p>
+                <div class="hero-buttons">
+                    <a href="profile.html" class="btn btn-primary">รู้จักฉันมากขึ้น</a>
+                    <a href="hobby.html" class="btn btn-outline">ดูงานอดิเรกของฉัน</a>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="blob-wrapper">
-                    <img src="images/BeautyPlus-photo_booth-2026-08-28T03_54_00.png" alt="รูปโปรไฟล์ของฉัน" class="blob-img">
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="https://placehold.co/400x400/1976D2/FFFFFF?text=My+Profile" alt="รูปโปรไฟล์ของฉัน">
+                    <div class="circle-decoration"></div>
                 </div>
-                <div class="floating-deco deco-1">✨</div>
-                <div class="floating-deco deco-2">🎀</div>
-                <div class="floating-deco deco-3">🌷</div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        
+        <div class="footer-container">
+            <p>&copy; 2026 [กรอกชื่อ] - นักเรียนชั้นมัธยมศึกษาปีที่ 3</p>
+        </div>
     </footer>
 </body>
 </html>
