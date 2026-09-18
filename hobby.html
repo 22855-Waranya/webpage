@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>งานอดิเรก | เว็บของวรัญญา</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Portfolio | งานอดิเรก</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="bg-layer"></div>
+    <div class="mouse-glow"></div>
+    
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">Space<span>Port.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html" class="active">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="orbit-nav">
-    <a href="index.html">หน้าแรก</a>
-    <a href="profile.html">ประวัติส่วนตัว</a>
-    <a href="education.html">การศึกษา</a>
-    <a href="hobby.html" class="current">งานอดิเรก</a>
-    <a href="contact.html">ติดต่อ</a>
-</nav>
+    <main class="container">
+        <h1 class="page-title neon-text">กลุ่มดาวความสนใจ</h1>
+        
+        <section class="hobby-grid">
+            <!-- Card 1 -->
+            <div class="glass-card hobby-card">
+                <div class="hobby-icon">🎮</div>
+                <h3>เกมเพลย์</h3>
+                <p>ชอบเล่นเกมแนว [กรอกแนวเกม] ช่วยฝึกการวางแผนและการตัดสินใจ</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="glass-card hobby-card">
+                <div class="hobby-icon">💻</div>
+                <h3>เทคโนโลยี</h3>
+                <p>ติดตามข่าวสาร IT, ฝึกเขียนโค้ด และชอบสำรวจโปรแกรมใหม่ๆ</p>
+            </div>
 
-<div class="shell">
-    <h1 class="page-title">งานอดิเรก</h1>
-    <p class="page-lede">สิ่งที่ทำให้ดิฉันมีความสุขในเวลาว่าง</p>
+            <!-- Card 3 -->
+            <div class="glass-card hobby-card">
+                <div class="hobby-icon">🎵</div>
+                <h3>ดนตรี</h3>
+                <p>ชอบฟังเพลงแนว [กรอกแนวเพลง] ช่วยสร้างสมาธิเวลาทำงาน</p>
+            </div>
 
-    <div class="hobby-grid">
-        <div class="hobby-card">
-            <span class="emoji">🎮</span>
-            <div class="name">[งานอดิเรก 1]</div>
-            <div class="desc">[อธิบายสั้นๆ ว่าทำไมถึงชอบ]</div>
-        </div>
-        <div class="hobby-card">
-            <span class="emoji">📷</span>
-            <div class="name">[งานอดิเรก 2]</div>
-            <div class="desc">[อธิบายสั้นๆ ว่าทำไมถึงชอบ]</div>
-        </div>
-        <div class="hobby-card">
-            <span class="emoji">🎸</span>
-            <div class="name">[งานอดิเรก 3]</div>
-            <div class="desc">[อธิบายสั้นๆ ว่าทำไมถึงชอบ]</div>
-        </div>
-        <div class="hobby-card">
-            <span class="emoji">🌌</span>
-            <div class="name">ดูดาว</div>
-            <div class="desc">ชอบมองท้องฟ้ายามค่ำคืนและตามหาดาวตก</div>
-        </div>
-    </div>
-</div>
+            <!-- Card 4 -->
+            <div class="glass-card hobby-card">
+                <div class="hobby-icon">⚽</div>
+                <h3>กีฬาและการเคลื่อนไหว</h3>
+                <p>เวลาว่างชอบ [กรอกกีฬา เช่น เตะฟุตบอล, ปั่นจักรยาน] เพื่อสุขภาพที่แข็งแรง</p>
+            </div>
+        </section>
+    </main>
 
-<footer class="sign-off">© 2026 — น.ส.วรัญญา ไชยวงศ์</footer>
+    <footer>
+        <p>&copy; 2026 จักรวาลของ [กรอกชื่อ] | ม.3/[กรอกห้อง] | โครงงานคอมพิวเตอร์</p>
+    </footer>
 
-<script src="space-bg.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
