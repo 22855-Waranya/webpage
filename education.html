@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>การศึกษา | เว็บของวรัญญา</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Portfolio | การศึกษา</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="bg-layer"></div>
+    <div class="mouse-glow"></div>
+    
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">Space<span>Port.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html" class="active">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="orbit-nav">
-    <a href="index.html">หน้าแรก</a>
-    <a href="profile.html">ประวัติส่วนตัว</a>
-    <a href="education.html" class="current">การศึกษา</a>
-    <a href="hobby.html">งานอดิเรก</a>
-    <a href="contact.html">ติดต่อ</a>
-</nav>
+    <main class="container">
+        <h1 class="page-title neon-text">เส้นทางการเดินทาง</h1>
+        
+        <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-content">
+                    <h3>ระดับประถมศึกษา</h3>
+                    <h4>โรงเรียน [กรอกชื่อโรงเรียนประถม]</h4>
+                    <p>เรียนรู้ทักษะพื้นฐาน และเริ่มค้นพบความชอบในวิชา [กรอกวิชาที่ชอบ]</p>
+                </div>
+            </div>
 
-<div class="shell">
-    <h1 class="page-title">การศึกษา</h1>
-    <p class="page-lede">เส้นทางการเรียนของดิฉัน เรียงตามช่วงเวลา</p>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="glass-card timeline-content">
+                    <h3>ระดับมัธยมศึกษาตอนต้น (ม.1 - ม.2)</h3>
+                    <h4>โรงเรียน [กรอกชื่อโรงเรียนมัธยม]</h4>
+                    <p>เข้าร่วมกิจกรรม [กรอกกิจกรรม] และพัฒนาทักษะด้านคอมพิวเตอร์</p>
+                </div>
+            </div>
 
-    <div class="timeline">
-        <div class="timeline-item">
-            <div class="year">[ปี พ.ศ. เช่น 2565 – ปัจจุบัน]</div>
-            <div class="title">[ชื่อสถาบัน / มหาวิทยาลัย]</div>
-            <div class="detail">[คณะ / สาขาวิชา]</div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot active-dot"></div>
+                <div class="glass-card timeline-content">
+                    <span class="badge">ปัจจุบัน</span>
+                    <h3>ระดับชั้นมัธยมศึกษาปีที่ 3</h3>
+                    <h4>โรงเรียน [กรอกชื่อโรงเรียน] | ห้อง [กรอกห้อง]</h4>
+                    <p>กำลังจัดทำโครงงานเว็บไซต์ Portfolio และเตรียมตัวศึกษาต่อในสายที่สนใจ</p>
+                    <p class="highlight-text">วิชาที่ชอบ: [กรอกวิชาที่ชอบ]</p>
+                </div>
+            </div>
         </div>
-        <div class="timeline-item">
-            <div class="year">[ปี พ.ศ.]</div>
-            <div class="title">[ชื่อโรงเรียนมัธยมปลาย]</div>
-            <div class="detail">[สายการเรียน]</div>
-        </div>
-        <div class="timeline-item">
-            <div class="year">[ปี พ.ศ.]</div>
-            <div class="title">[ชื่อโรงเรียนมัธยมต้น]</div>
-            <div class="detail">[รายละเอียดเพิ่มเติม ถ้ามี]</div>
-        </div>
-    </div>
-</div>
+    </main>
 
-<footer class="sign-off">© 2026 — น.ส.วรัญญา ไชยวงศ์</footer>
+    <footer>
+        <p>&copy; 2026 จักรวาลของ [กรอกชื่อ] | ม.3/[กรอกห้อง] | โครงงานคอมพิวเตอร์</p>
+    </footer>
 
-<script src="space-bg.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
