@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Portfolio | หน้าแรก</title>
+    <title>Cosmic Portfolio | หน้าแรก</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mouse-glow"></div>
-    
+    <!-- พื้นหลังอวกาศและแสงตามเมาส์ -->
+    <div class="mouse-trail"></div>
+    <div class="space-bg">
+        <div class="black-hole"></div>
+        <div class="planet planet-1"></div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3255/3255815.png" alt="Satellite" class="satellite float-slow">
+    </div>
+
     <header>
         <nav class="glass-nav">
-            <div class="logo">Space<span>Port.</span></div>
+            <div class="logo">Astro<span>Port.</span></div>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">หน้าแรก</a></li>
                 <li><a href="profile.html">ประวัติส่วนตัว</a></li>
@@ -25,28 +31,26 @@
 
     <main class="container">
         <section class="hero-section">
-            <div class="hero-content">
-                <p class="greeting">สวัสดีผู้มาเยือนจากต่างดาว 👋</p>
-                <h1 class="neon-text">ผมชื่อ <br><span>[กรอกชื่อ-นามสกุล]</span></h1>
+            <div class="hero-text">
+                <p class="subtitle glowing-text">ยินดีต้อนรับสู่จักรวาลของผม 🌌</p>
+                <h1>ผมคือ <span class="gradient-text">[กรอกชื่อ-นามสกุล]</span></h1>
                 <p class="description">
-                    นักเรียนชั้นมัธยมศึกษาปีที่ 3 ผู้หลงใหลในเทคโนโลยีและอวกาศ 
-                    ยินดีต้อนรับสู่จักรวาลส่วนตัวของผม!
+                    นักเรียนชั้นมัธยมศึกษาปีที่ 3 ผู้หลงใหลในความลึกลับของเทคโนโลยีและอวกาศ 
+                    เว็บไซต์นี้คือบันทึกการเดินทางในสายวิชาการและความชอบส่วนตัวของผม
                 </p>
                 <div class="btn-group">
-                    <a href="profile.html" class="btn btn-primary">สำรวจตัวตนของฉัน</a>
-                    <a href="hobby.html" class="btn btn-outline">ดูงานอดิเรก</a>
+                    <a href="profile.html" class="btn btn-glow">เริ่มการสำรวจ</a>
+                    <a href="hobby.html" class="btn btn-border">งานอดิเรก</a>
                 </div>
             </div>
-            <div class="hero-image floating">
-                <!-- สามารถเปลี่ยน src เป็นรูปภาพแบบ PNG ตัดพื้นหลังของคุณเองได้ -->
-                <img src="https://placehold.co/400x400/1A1A40/00E5FF?text=Profile+Image" alt="รูปโปรไฟล์ของฉัน" class="profile-img">
+            <div class="hero-visual float-fast">
+                <div class="profile-frame">
+                    <img src="https://placehold.co/400x400/030014/00F3FF?text=My+Profile" alt="รูปของฉัน" class="profile-pic">
+                    <div class="orbit-ring"></div>
+                </div>
             </div>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 จักรวาลของ [กรอกชื่อ] | ม.3/[กรอกห้อง] | โครงงานคอมพิวเตอร์</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
