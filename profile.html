@@ -1,43 +1,60 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ประวัติส่วนตัว | เว็บของวรัญญา</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Portfolio | ประวัติส่วนตัว</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="bg-layer"></div>
+    <div class="mouse-glow"></div>
+    
+    <header>
+        <nav class="glass-nav">
+            <div class="logo">Space<span>Port.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html" class="active">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<nav class="orbit-nav">
-    <a href="index.html">หน้าแรก</a>
-    <a href="profile.html" class="current">ประวัติส่วนตัว</a>
-    <a href="education.html">การศึกษา</a>
-    <a href="hobby.html">งานอดิเรก</a>
-    <a href="contact.html">ติดต่อ</a>
-</nav>
+    <main class="container">
+        <h1 class="page-title neon-text">สถานีข้อมูลส่วนตัว</h1>
+        
+        <section class="profile-grid">
+            <div class="glass-card profile-card">
+                <img src="https://placehold.co/300x300/1A1A40/8E2DE2?text=My+Face" alt="รูปของฉัน" class="profile-avatar floating">
+                <h2>[กรอกชื่อเล่น]</h2>
+                <p class="role">นักสำรวจอวกาศ (นักเรียน)</p>
+            </div>
+            
+            <div class="glass-card info-card">
+                <h3>ข้อมูลพื้นฐาน</h3>
+                <ul class="info-list">
+                    <li><strong>ชื่อ-นามสกุล:</strong> [กรอกชื่อ-นามสกุล]</li>
+                    <li><strong>อายุ:</strong> [กรอกอายุ] ปี</li>
+                    <li><strong>วันเกิด:</strong> [กรอกวันเกิด]</li>
+                    <li><strong>จังหวัด:</strong> [กรอกจังหวัด]</li>
+                </ul>
+                <hr>
+                <h3>เกี่ยวกับฉัน</h3>
+                <p>
+                    [เขียนแนะนำตัวสั้นๆ เช่น เป็นคนชอบเรียนรู้สิ่งใหม่ๆ ชอบทดลองเทคโนโลยี 
+                    มีความฝันอยากเป็นโปรแกรมเมอร์ หรือชอบค้นคว้าเรื่องดาราศาสตร์ ฯลฯ]
+                </p>
+            </div>
+        </section>
+    </main>
 
-<div class="shell">
-    <div class="photo-frame">
-        <img src="profile-photo.jpg" alt="รูปโปรไฟล์ วรัญญา" onerror="this.style.display='none'; this.parentElement.innerHTML='ใส่รูปของคุณที่นี่<br>(profile-photo.jpg)';">
-    </div>
-    <h1 class="page-title" style="text-align:center;">ประวัติส่วนตัว</h1>
-    <p class="page-lede" style="text-align:center; margin-left:auto; margin-right:auto;">น.ส.วรัญญา ไชยวงศ์</p>
+    <footer>
+        <p>&copy; 2026 จักรวาลของ [กรอกชื่อ] | ม.3/[กรอกห้อง] | โครงงานคอมพิวเตอร์</p>
+    </footer>
 
-    <div class="panel">
-        <h2 class="section-title">เกี่ยวกับฉัน</h2>
-        <p>สวัสดีค่ะ ดิฉันชื่อ น.ส.วรัญญา ไชยวงศ์ ยินดีที่ได้รู้จักค่ะ [เพิ่มเติม: อาชีพ/สถานะ เช่น นักศึกษาชั้นปีที่... หรือทำงานที่ไหน]</p>
-    </div>
-
-    <div class="panel">
-        <h2 class="section-title">ข้อมูลทั่วไป</h2>
-        <p>[วันเกิด / ที่อยู่ / จังหวัด ฯลฯ — ใส่เท่าที่ต้องการเปิดเผย]</p>
-    </div>
-</div>
-
-<footer class="sign-off">© 2026 — น.ส.วรัญญา ไชยวงศ์</footer>
-
-<script src="space-bg.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
