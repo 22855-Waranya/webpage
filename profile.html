@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Portfolio | ประวัติส่วนตัว</title>
+    <title>Cosmic Portfolio | ประวัติส่วนตัว</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mouse-glow"></div>
-    
+    <div class="mouse-trail"></div>
+    <div class="space-bg"><div class="planet planet-2"></div></div>
+
     <header>
         <nav class="glass-nav">
-            <div class="logo">Space<span>Port.</span></div>
+            <div class="logo">Astro<span>Port.</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html" class="active">ประวัติส่วนตัว</a></li>
@@ -24,36 +25,32 @@
     </header>
 
     <main class="container">
-        <h1 class="page-title neon-text">สถานีข้อมูลส่วนตัว</h1>
+        <h1 class="page-title gradient-text">แฟ้มข้อมูลนักบินอวกาศ</h1>
         
-        <section class="profile-grid">
-            <div class="glass-card profile-card">
-                <img src="https://placehold.co/300x300/1A1A40/8E2DE2?text=My+Face" alt="รูปของฉัน" class="profile-avatar floating">
+        <div class="profile-layout">
+            <div class="glass-box avatar-box float-slow">
+                <img src="https://placehold.co/300x300/030014/FF007F?text=Face" alt="รูปโปรไฟล์">
                 <h2>[กรอกชื่อเล่น]</h2>
-                <p class="role">นักสำรวจอวกาศ (นักเรียน)</p>
+                <p class="role">ระดับชั้น: ม.3 / [กรอกห้อง]</p>
             </div>
             
-            <div class="glass-card info-card">
-                <h3>ข้อมูลพื้นฐาน</h3>
-                <ul class="info-list">
-                    <li><strong>ชื่อ-นามสกุล:</strong> [กรอกชื่อ-นามสกุล]</li>
-                    <li><strong>อายุ:</strong> [กรอกอายุ] ปี</li>
-                    <li><strong>วันเกิด:</strong> [กรอกวันเกิด]</li>
-                    <li><strong>จังหวัด:</strong> [กรอกจังหวัด]</li>
-                </ul>
-                <hr>
-                <h3>เกี่ยวกับฉัน</h3>
+            <div class="glass-box info-box">
+                <h3 class="glowing-text">ข้อมูลยืนยันตัวตน</h3>
+                <div class="info-grid">
+                    <div class="info-item"><span>ชื่อ-สกุล:</span> [กรอกชื่อ]</div>
+                    <div class="info-item"><span>อายุ:</span> [กรอกอายุ] ปี</div>
+                    <div class="info-item"><span>วันเกิด:</span> [กรอกวันเกิด]</div>
+                    <div class="info-item"><span>ฐานปฏิบัติการ (จังหวัด):</span> [กรอกจังหวัด]</div>
+                </div>
+                <hr class="divider">
+                <h3 class="glowing-text">เกี่ยวกับฉัน (Log Diary)</h3>
                 <p>
-                    [เขียนแนะนำตัวสั้นๆ เช่น เป็นคนชอบเรียนรู้สิ่งใหม่ๆ ชอบทดลองเทคโนโลยี 
-                    มีความฝันอยากเป็นโปรแกรมเมอร์ หรือชอบค้นคว้าเรื่องดาราศาสตร์ ฯลฯ]
+                    [เขียนแนะนำตัว เช่น ผมเป็นคนที่ชื่นชอบการแก้ปัญหา ชอบวิชาวิทยาศาสตร์และคอมพิวเตอร์ 
+                    ในอนาคตมีความฝันที่อยากจะเป็นนักพัฒนาซอฟต์แวร์ที่สร้างสรรค์สิ่งใหม่ๆ...]
                 </p>
             </div>
-        </section>
+        </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 จักรวาลของ [กรอกชื่อ] | ม.3/[กรอกห้อง] | โครงงานคอมพิวเตอร์</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
