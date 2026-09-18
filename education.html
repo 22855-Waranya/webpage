@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Portfolio | การศึกษา</title>
+    <title>Cosmic Portfolio | การศึกษา</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="mouse-glow"></div>
-    
+    <div class="mouse-trail"></div>
+    <div class="space-bg"><div class="black-hole" style="top:20%; left:80%; transform:scale(0.5);"></div></div>
+
     <header>
         <nav class="glass-nav">
-            <div class="logo">Space<span>Port.</span></div>
+            <div class="logo">Astro<span>Port.</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">หน้าแรก</a></li>
                 <li><a href="profile.html">ประวัติส่วนตัว</a></li>
@@ -24,47 +24,33 @@
     </header>
 
     <main class="container">
-        <h1 class="page-title neon-text">เส้นทางการเดินทาง</h1>
+        <h1 class="page-title gradient-text">เส้นทางโคจร (การศึกษา)</h1>
         
-        <div class="timeline">
-            <!-- Timeline Item 1 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="glass-card timeline-content">
-                    <h3>ระดับประถมศึกษา</h3>
-                    <h4>โรงเรียน [กรอกชื่อโรงเรียนประถม]</h4>
-                    <p>เรียนรู้ทักษะพื้นฐาน และเริ่มค้นพบความชอบในวิชา [กรอกวิชาที่ชอบ]</p>
-                </div>
+        <div class="timeline-container">
+            <div class="timeline-box glass-box">
+                <div class="dot"></div>
+                <h3>ระดับประถมศึกษา</h3>
+                <h4>โรงเรียน [กรอกชื่อโรงเรียนประถม]</h4>
+                <p>จุดเริ่มต้นของการเรียนรู้ เริ่มค้นพบความชอบในวิชาคณิตศาสตร์และศิลปะ</p>
             </div>
 
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="glass-card timeline-content">
-                    <h3>ระดับมัธยมศึกษาตอนต้น (ม.1 - ม.2)</h3>
-                    <h4>โรงเรียน [กรอกชื่อโรงเรียนมัธยม]</h4>
-                    <p>เข้าร่วมกิจกรรม [กรอกกิจกรรม] และพัฒนาทักษะด้านคอมพิวเตอร์</p>
-                </div>
+            <div class="timeline-box glass-box">
+                <div class="dot"></div>
+                <h3>ระดับมัธยมศึกษาตอนต้น (ม.1 - ม.2)</h3>
+                <h4>โรงเรียน [กรอกชื่อโรงเรียนมัธยม]</h4>
+                <p>เข้าร่วมชมรม [กรอกชื่อชมรม] และเริ่มเรียนรู้การใช้งานคอมพิวเตอร์พื้นฐาน</p>
             </div>
 
-            <!-- Timeline Item 3 -->
-            <div class="timeline-item">
-                <div class="timeline-dot active-dot"></div>
-                <div class="glass-card timeline-content">
-                    <span class="badge">ปัจจุบัน</span>
-                    <h3>ระดับชั้นมัธยมศึกษาปีที่ 3</h3>
-                    <h4>โรงเรียน [กรอกชื่อโรงเรียน] | ห้อง [กรอกห้อง]</h4>
-                    <p>กำลังจัดทำโครงงานเว็บไซต์ Portfolio และเตรียมตัวศึกษาต่อในสายที่สนใจ</p>
-                    <p class="highlight-text">วิชาที่ชอบ: [กรอกวิชาที่ชอบ]</p>
-                </div>
+            <div class="timeline-box glass-box active">
+                <div class="dot glow-dot"></div>
+                <div class="status-badge">พิกัดปัจจุบัน</div>
+                <h3 class="glowing-text">ระดับชั้นมัธยมศึกษาปีที่ 3</h3>
+                <h4>โรงเรียน [กรอกชื่อโรงเรียน]</h4>
+                <p>กำลังพัฒนาทักษะการสร้างเว็บไซต์ และเตรียมตัวสำหรับการศึกษาต่อในอนาคต</p>
+                <p><strong>วิชาที่ชอบ:</strong> [กรอกวิชาที่ชอบ]</p>
             </div>
         </div>
     </main>
-
-    <footer>
-        <p>&copy; 2026 จักรวาลของ [กรอกชื่อ] | ม.3/[กรอกห้อง] | โครงงานคอมพิวเตอร์</p>
-    </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
